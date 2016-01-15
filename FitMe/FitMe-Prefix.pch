@@ -1,0 +1,32 @@
+
+//
+//  FitMe-Prefix.pch
+//  FitMe
+//
+//  Created by Softheme iMac on 12/2/15.
+//  Copyright © 2015 Artem Tkachuk. All rights reserved.
+//
+
+#ifndef FitMe_Prefix_pch
+#define FitMe_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Constants.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <Availability.h>
+//#import "Reachability.h"
+//#import <Crashlytics/Answers.h>
+
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#   define DLog(...)
+#endif
+
+// ALog always displays output regardless of the DEBUG setting
+#define ALog(fmt, ...) DLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+
+#endif /* FitMe_Prefix_pch */
